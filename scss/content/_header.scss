@@ -1,0 +1,218 @@
+/* MOBILE+ */
+
+header {
+	padding: $vert-space 0 $vert-space / 2;
+	background-color: $white-smoke;
+	
+	.header-content-wrapper {
+		position: relative;
+	
+		.logo-header-info {
+			h1.logo {
+				display: block; 
+				height: 1.5em;
+				margin-top: 0;
+				margin-bottom: .5em;
+				background-image: url( ../images/logo.png ); 
+				background-repeat: no-repeat;
+				background-size: contain;
+				
+				a.logo-link { 
+					span.site-title {
+						display: none;
+					}
+				}
+			}
+			
+			.header-info {
+				text-align: center;
+				font-family: $header-font-family;
+				
+				.search-area
+				{
+					margin-bottom: 1em;
+					
+					a {
+						margin-right: .625em;
+						font-size: .75em;
+						color: $base-font-color;
+						transition: $base-transition-color;
+						
+						&:link, &:visited, &:active {
+							color: $base-font-color;
+						}
+						
+						&:hover {
+							color: $hover-font-color;
+						}
+					}
+					
+					form.search-box {
+						display: inline-block;
+						border: .063em solid $silver;
+						background: $white;
+						position: relative;
+						
+						input.search-field {
+							width: 9.5em;
+							border: none;
+							margin-left: .313em;
+							font-family: $base-font-family;
+							font-size: .75em;
+							
+							&::-webkit-input-placeholder {
+								opacity: 1;
+								color: $base-font-color;
+								font-family: $base-font-family; 
+								font-size: 1em;
+							}
+							
+							&::-moz-placeholder {
+								opacity: 1;
+								color: $base-font-color;
+								font-family: $base-font-family; 
+								font-size: 1em;
+							}
+						}
+						
+						button.magnifier {
+							position: absolute;
+							right: -.2em;
+							top: .2em;
+							width: 1.6em;
+							height: 1em;
+							background-color: transparent;
+							background-image: $ico-magnifier_black;
+							background-repeat: no-repeat;
+							background-size:contain;
+							padding: 0;
+							border: none;
+							cursor: pointer;
+							
+							&:hover {
+								background-image: $ico-magnifier_red_brown;
+							}
+							
+							span.submit-button-text {
+								display: none;
+							}
+						}
+					}
+				}
+				
+				h2 {
+					color: $header-font-color;
+					margin: 0;
+					font-size: 1.45em;
+					font-weight: normal;
+				}
+			}
+		}
+		
+		.social-links {
+			display: block;
+			top: -2em;
+			
+			a, a:link, a:visited, a:active {
+				background-color: $link-font-color;
+				border-radius: 0 0 .313em .313em;
+				
+				.ico-linkedin {
+					background-image: $ico-linkedin_white_smoke;
+					margin: .15em 0 0 .28em;
+				}
+				
+				.ico-twitter {
+					background-image: $ico-twitter_white_smoke;
+					margin: .15em 0 0 .25em;
+				}
+				
+				.ico-rss {
+					background-image: $ico-rss_white_smoke;
+					margin: .15em 0 0 .28em;
+				}
+			}
+			
+			a:hover {
+				background-color: $hover-font-color;
+			}	
+		}
+	}
+}
+
+/* PRE-NARROW+ */
+
+@media screen and (min-width: $mobile_end_narrow) {
+	header {
+		padding: $vert-space 0 0;
+		
+		.header-content-wrapper {
+			.logo-header-info {	
+				.header-info {
+					white-space: nowrap;
+					
+					.search-area, h2 {
+						display: inline-block;
+						width: 50%;
+					}
+					
+					.search-area
+					{
+						text-align: left;
+					}
+					
+					h2 {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* BURGER_END+ */
+
+@media screen and (min-width: $burger_end) {
+	header {
+		.header-content-wrapper {
+			.logo-header-info {	
+				white-space: nowrap;
+			
+				h1.logo {
+					display: inline-block;
+					width: 50%;
+					margin: 0;
+					vertical-align: bottom;
+				}
+				
+				.header-info {
+					display:inline-block;
+					width:50%;
+					
+					.search-area, h2 {
+						display: block;
+						width: auto;
+					}
+					
+					.search-area
+					{
+						text-align: right;
+					}
+				}
+			}
+			
+			.social-links {
+				top: auto;
+				bottom: -.25em;
+				
+				a, a:link, a:visited, a:active {
+					border-radius: .313em .313em 0 0;
+					
+					.ico-linkedin, .ico-twitter, .ico-rss {
+						margin-top: .24em;
+					}
+				}
+			}
+		}
+	}
+}

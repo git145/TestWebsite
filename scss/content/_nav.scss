@@ -1,0 +1,140 @@
+/* MOBILE+ */
+
+nav {
+	a.mobile-menu {
+		font-size: 2em;
+		position: absolute;
+		top: -.13em;
+		right: 0;
+		width: 1.2em;
+		height: 1.2em;
+		display: block;
+		background-image: $ico-hamburger;
+		background-size: contain;
+		
+		&:hover {
+			background-image: $ico-hamburger_silver;
+		}
+		
+		span.menu-button-title {
+			display: none;
+		}
+	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		height: 0;
+		overflow: hidden;
+		padding-left: 0;
+		
+		li {
+			padding: .5em 0;
+			
+			a {
+				font-size: .8em;
+				color: $base-font-color;
+				
+				&:link, &:visited, &:active {
+					color: $base-font-color;
+				}
+				
+				&:not(.active) {
+					transition: $base-transition-color;
+					
+					&:hover {
+						color: $hover-font-color;
+					}
+				}
+				
+				&.active {
+					color: $hover-font-color;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	
+	a.mobile-menu:focus + ul, a.mobile-menu:hover + ul {
+		height: 15em;
+	}
+}
+
+/* PRE-NARROW+ */
+
+@media screen and (min-width: $mobile_end_narrow) {
+	nav {
+		position: absolute;
+		z-index: 1;
+		top: 6.5em;
+		right: 0;
+		width: 12.5em;
+		
+		a.mobile-menu {
+			margin: 0;
+			top: -3.4em;
+		}
+
+		ul {
+			background-color: $white_smoke;
+			padding-right: 4em;
+			padding-left: 4em;
+		}
+		
+		a.mobile-menu:focus + ul, a.mobile-menu:hover + ul {
+			height: 17em;
+		}
+	}
+}
+
+/* BURGER_END+ */
+
+@media screen and (min-width: $burger_end) {
+	nav {
+		position: static;
+		width: auto;
+		
+		a.mobile-menu {
+			display: none;
+		}
+
+		ul {
+			text-align: left;
+			padding: 0;
+			height: auto;
+			overflow: visible;
+			width: 100%;
+			
+			li {
+				display: inline-block;
+				position: relative;
+				padding: 1.5em 0 .5em;
+				
+				&:not(:last-of-type){
+					&:after {
+						content: '|';
+						padding: 0 .5em;
+						color: $link-font-color;
+						font-size: .65em;
+					}
+					
+					a.active:after {
+						padding-right: 1.3em;
+					}
+				}
+				
+				a.active:after {
+					content: url( "../images/ico-arrow_grey_down.png" );
+					position: absolute;
+					left: 0;
+					right: 0;
+					text-align: center;
+					top: 4em;
+					pointer-events: none;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

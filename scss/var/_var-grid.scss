@@ -1,0 +1,37 @@
+/* MINIMUM SCREEN WIDTHS */
+
+/* STANDARD */
+
+$mobile: 0; /* 0px */
+$narrow: 45em; /* 720px */
+$normal: 60em; /* 960px */
+$wide: 75em; /* 1200px */
+
+/* EXTRA */
+
+$mobile_end: 20em; /* 320px */
+$mobile_end_narrow: 33.75em; /* 540px */
+$burger_end: 55em; /* 880px */
+$max-width: 62.5em; /* 1000px */
+
+/* STYLING */
+
+/* VARIABLES */
+
+$vert-space: 2em; /* 32px */
+
+/* MOBILE+ */
+
+.content-wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* NORMAL+ */
+
+@media screen and (min-width: $normal) {
+	.content-wrapper {
+		width: 75%;
+		max-width: $max-width;
+	}
+}

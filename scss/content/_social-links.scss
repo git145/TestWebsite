@@ -1,0 +1,32 @@
+/* MOBILE+ */
+
+.social-links {
+	position: absolute;
+	right: 0;
+	
+	a {
+		display: inline-block;
+		width: 1.25em;
+		height: 1.1em;
+		padding: 0;
+		
+		&.twitter-link {
+			margin-left: -.1em;
+		}
+		
+		&.rss-link {
+			margin-left: -.15em;
+		}
+		
+		div {
+			width: 65%;
+			height: 65%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			
+			span {
+				display: none;
+			}
+		}
+	}
+}

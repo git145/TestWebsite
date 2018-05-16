@@ -1,0 +1,144 @@
+/* MOBILE+ */
+
+footer {
+	section.contact-information {
+		background-color: $header-font-color;
+		padding: $vert-space 0 0;
+		box-shadow: $section_shadow;
+		display: block;
+		text-align: center;
+		
+		.contact-information-content-wrapper {
+			position: relative; /* TO POSITION SOCIAL LINKS */
+			display: inline-block;
+		
+			.vesta-healthcare {
+				h2, p, address {
+					margin: 0;
+					font-size: 1em;  
+					color: $sub-font-color;
+					text-align: left;
+				}
+				
+				p, address {
+					margin-bottom: 2.5em;
+				}
+				
+				address {
+					font-style: normal;
+				}
+			}
+			
+			.social-links {
+				bottom: -.25em;
+				
+				a, a:link, a:visited, a:active {
+					background-color: $sub-font-color;
+					border-radius: .313em .313em 0 0;
+					
+					.ico-linkedin {
+						background-image: $ico-linkedin_spanish_gray;
+						margin: .24em 0 0 .28em;
+					}
+					
+					.ico-twitter {
+						background-image: $ico-twitter_spanish_gray;
+						margin: .24em 0 0 .25em;
+					}
+					
+					.ico-rss {
+						background-image: $ico-rss_spanish_gray;
+						margin: .24em 0 0 .28em;
+					}
+				}
+				
+				a:hover {
+					.ico-linkedin {
+						background-image: $ico-linkedin_red_brown;
+					}
+					
+					.ico-twitter {
+						background-image: $ico-twitter_red_brown;
+					}
+					
+					.ico-rss {
+						background-image: $ico-rss_red_brown;
+					}
+				}
+			}
+		}
+	}
+	
+	section.footer-links-built-by {
+		background-color: $sub-font-color;
+		padding: $vert-space * 0.55 0 $vert-space / 2.5;
+		
+		.footer-links-built-by-content {
+			text-align: center;
+			margin: 0 0 1em;
+			font-size: .75em;
+			
+			a { 
+				color: $base-font-color;
+				transition: $base-transition-color;
+				
+				&:link, &:visited, &:active {
+					color: $base-font-color;
+				}
+				
+				&:hover {
+					color: $hover_font_color; 
+				}
+			}
+			
+			&.footer-links {
+				padding-left: 0;
+				list-style: none;
+				
+				li {
+					display: inline;
+					
+					&:not(:last-of-type):after {
+						content: '|';
+						padding: 0 .5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* NARROW+ */
+
+@media screen and (min-width: $narrow) {
+	footer {
+		section.contact-information {
+			white-space: nowrap;
+			
+			.vesta-healthcare {
+				width: 40%;
+				margin-right: 10%;
+				display: inline-block;
+				white-space: normal;
+				vertical-align: top;
+			}
+		}
+	
+		section.footer-links-built-by {
+			white-space: nowrap;
+			
+			.footer-links-built-by-content {
+				display: inline-block;
+				width: 50%;
+			
+				&.footer-links {
+					text-align: left;
+				}
+				
+				&.built-by {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

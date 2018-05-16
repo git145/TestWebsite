@@ -1,0 +1,12 @@
+/* SHADOWS */
+
+$section_shadow: inset 0 1em .5em -.5em $black_transparent, 
+				 inset 0 -1em .5em -.5em $black_transparent;
+$section_shadow_top: inset 0 .8em .2em -.5em $black_transparent_2;
+				 
+$card_shadow: 0 0 .313em .188em $spanish_gray_transparent;
+
+/* ANIMATION */
+
+$base-transition-time: .5s;
+$base-transition-color: color $base-transition-time;
